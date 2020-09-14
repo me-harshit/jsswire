@@ -1,0 +1,26 @@
+{
+  "name": "wire",
+  "version": "1.0.0",
+  "description": "Wire to connect all users through Socket",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@joeattardi/emoji-button": "^4.1.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.27.0",
+    "mongoose": "^5.10.5",
+    "mongoose-findorcreate": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "socket.io": "^2.3.0"
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/profile.css" />
+
+  	<!-- materialize -->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Wire | Chat</title>
+</head>
+<body>
+  <!-- navbar -->
+<nav style="background-color: #813588;">
+  <div class="nav-wrapper">
+    <a href="/join" class="brand-logo logoText" style="margin-left: 10px;"> <img src="public/images/share.png" alt="Wire" style="width: 45px;filter: invert();margin:10px;"></a>
+    <a href="/join" class="brand-logo" style="margin-left: 75px;">Wire</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="https://jssconnect.herokuapp.com/" style="margin-right: 30px;font-size: 1.2rem;">JSS connect</a></li>
+      <li class="tooltip" id="userProfile">
+        <span class="myChip" style="margin: 10px 30px;">
+          <img
+          src="data:image/jpeg;base64,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"
+          id="picture" alt="Person" width="96" height="96">
+          <span id="chipName">Guest</span>
+        </span>
+        <span class="tooltiptext">
+          <h6 id="username">Guest</h6>
+          <h6 id="email">guest@guest.com</h6>
+          <a class="waves-effect waves-light btn profBtn" style="margin: 10px auto;" id="logBtn"
+          href="/logout">Logout</a>
+        </span>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="https://jssconnect.herokuapp.com/" style="margin-right: 30px;font-size: 1.2rem;">JSS connect</a></li>
+  <li class="tooltip" id="userProfile">
+		<span class="myChip" style="margin: 10px 30px;">
+		  <img
+			src="data:image/jpeg;base64,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"
+			id="picture1" alt="Person" width="96" height="96">
+		  <span id="chipName1">Guest</span>
+		</span>
+		<span class="tooltiptext" id="t1">
+		  <h6 id="username1">Guest</h6>
+		  <h6 id="email1">guest@guest.com</h6>
+		  <a class="waves-effect waves-light btn profBtn" style="margin: 10px auto;" id="logBtn1"
+			href="/logout">Logout</a>
+		</span>
+	  </li>
+</ul>
+      
+    <div class="chat-container">
+    <header class="chat-header">
+      <h3 style="margin: 0 auto;"><img src="public/images/share.png" alt="Wire" style="width: 45px;filter: invert();margin:0px;"> Wire</h3>
+      <a href="/join" class="btn leaveBtn">Leave Room</a>
+     </header>
+    <main class="chat-main">
+      <div class="chat-sidebar">
+        <h5><i class="fas fa-comments"></i> Room Name:</h5>
+        <h6 id="room-name"></h6>
+        <h5><i class="fas fa-users"></i> Users</h5>
+        <ul id="users">
+
+        </ul>
+      </div>
+      <div class="chat-messages">
+				 
+      </div>
+    </main>
+    <div class="chat-form-container">
+      <form id="chat-form">
+        
+        <input
+        
+        id="msg"
+        type="text"
+        placeholder="Enter Message"
+          required
+          autocomplete="off"
+          style="color: white;"
+          />
+          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        </form>
+    </div>
+  </div>
+
+  
+<!-- Footer -->
+<footer class="page-footer">
+	<div class="container">
+	  <div class="row">
+		<div class="col l6 s12">
+			<h4 style="margin: 0px;margin-bottom: 18px;"><img src="public/images/share.png" alt="Wire" style="width: 45px;filter: invert();margin:0px;"> Wire</h4>
+		  <p class="grey-text text-lighten-4">One stop destination for all JSSATENs to interact with each other.</p>
+		</div>
+		<div class="col l4 offset-l2 s12 link">
+		  <h5 class="white-text">Links</h5>
+		  <ul>
+			<li class="myLinks"><a class="grey-text text-lighten-3" href="https://jssconnect.herokuapp.com/">Jssconnect</a></li>
+			<li class="myLinks"><a class="grey-text text-lighten-3" href="https://jssconnect.herokuapp.com/contact">Team</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+	<div class="footer-copyright" style="margin-top: 60px;background-color: #222831;">
+	  <div class="container">
+	  © 2020  Wire
+	  <a class="grey-text text-lighten-4 right" href="#" ><i class="small material-icons">keyboard_arrow_up</i></a>
+	  </div>
+	</div>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+
+  <script type="module">
+    
+// script for nav
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+
+  // JS for Profile
+
+  let name = document.getElementById("username");
+    let chipName = document.getElementById("chipName");
+    let mail = document.getElementById("email");
+    let picture = document.getElementById("picture");
+    let name1 = document.getElementById("username1");
+    let chipName1 = document.getElementById("chipName1");
+    let mail1 = document.getElementById("email1");
+    let picture1 = document.getElementById("picture1");
+    let logBtn = document.getElementById("logBtn");
+    logBtn.style.display = "none";
+    let logBtn1 = document.getElementById("logBtn1");
+    logBtn1.style.display = "none";
+
+    const query = window.location.search.substring(1)
+
+    // const query = window.location.href.substr(0, window.location.href.indexOf('#'));
+    const token = query.split('email=')[1]
+    console.log(token);
+
+    name.innerHTML = "Guest";
+    mail.innerHTML = "guest@guest.com";
+    picture.setAttribute("src", "data:image/jpeg;base64,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");
+
+    loadDoc();
+
+    async function loadDoc() {
+      const res = await fetch(`/profile/${token}`);
+      const data = await res.json();
+
+      console.log(data);
+      console.log(data.length);
+      if (data != "") {
+        let username = data[0].name;
+        let email = data[0].email;
+        let img = data[0].picture;
+        localStorage.setItem("name", username);
+        localStorage.setItem("email", email);
+        localStorage.setItem("img", img);
+      }
+      displayProfile();
+    }
+
+    function displayProfile() {
+
+      let myUsername = localStorage.getItem("name")
+      let myEmail = localStorage.getItem("email");
+      let myImg = localStorage.getItem("img");
+      
+    //   M.toast({ html: `Welcome ${myUsername} to Jssconnect` });
+      chipName.innerHTML = myUsername;
+      name.innerHTML = "<i class='material-icons' style='display:inline;margin:9px;'>verified_user</i>"
+      name.innerHTML += myUsername;
+      mail.innerHTML = "<i class='material-icons' style='display:inline;margin:9px;'>email</i>"
+      mail.innerHTML += myEmail;
+      picture.setAttribute("src", myImg);
+      logBtn.style.display = "block";
+      logBtn1.style.display = "block";
+
+      chipName1.innerHTML = myUsername;
+      name1.innerHTML = "<i class='material-icons' style='display:inline;margin:9px;'>verified_user</i>"
+      name1.innerHTML += myUsername;
+      mail1.innerHTML = "<i class='material-icons' style='display:inline;margin:9px;'>email</i>"
+      mail1.innerHTML += myEmail;
+      picture1.setAttribute("src", myImg);
+    }
+
+  </script>
+</body>
+</html>
