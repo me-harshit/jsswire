@@ -198,7 +198,9 @@ app.get("/chat", (req, res) => {
 })
 
 // Authentication ends
-
+app.get("/privacy", (req, res) => {
+    res.sendFile(__dirname + "/views/privacy.html")
+})
 app.get("/index.css", (req, res) => {
     res.sendFile(__dirname + "/views/index.css")
 })
